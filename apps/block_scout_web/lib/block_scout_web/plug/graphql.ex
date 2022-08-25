@@ -9,4 +9,15 @@ defmodule BlockScoutWeb.Plug.GraphQL do
 
     "{transaction(hash: \"#{transaction_hash}\") { hash, blockNumber, value, gasUsed }}"
   end
+
+  def default_websocket_url do
+    socket_root = System.get_env("SOCKET_ROOT") <> "/socket" || "/socket"
+    host = System.get_env("BLOCKSCOUT_HOST")
+    case System.get_env("BLOCKSCOUT_PROTOCOL") do
+      "http" -> "ws://" <> host <> socket_root
+      "https" -> "wss://" <> host <> socket_root
+      _ -> "ws://" <> host <> socket_root
+    end
+  end
+
 end

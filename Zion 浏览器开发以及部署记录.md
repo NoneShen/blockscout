@@ -26,6 +26,8 @@ https://github.com/NoneShen/blockscout/commit/560472da7a7c290a0688056f5dc43504ce
 https://github.com/NoneShen/blockscout/commit/6552b3b1edb5c04e7abb382b76ead245e8e2807e
 7. 修改客户端的indexer初始化模块，由原来的完全不启动任何模块变为仅仅启动CoinBalanceOnDemand，使得任意钱包地址的balance在有前端请求的时候定期的更新
     https://github.com/NoneShen/blockscout/commit/ecc65298c85a6a22a8ac6599425c56170bb112d2
+8. 修改客户端的Graphql初始化模块，使得默认的websocket url带有/testnet或者/mainnet
+ https://github.com/NoneShen/blockscout/commit/c4bdc8ed2964c65d5919828f17b3ceb118bec47e
 
 # 部署
 

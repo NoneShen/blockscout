@@ -41,6 +41,7 @@ defmodule BlockScoutWeb.Router do
       interface: :advanced,
       default_query: GraphQL.default_query(),
       socket: BlockScoutWeb.UserSocket,
+      socket_url: GraphQL.default_websocket_url(),
       analyze_complexity: true,
       max_complexity: @max_complexity
     )
