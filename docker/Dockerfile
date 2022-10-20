@@ -14,7 +14,8 @@ ENV GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc \
     NETWORK_PATH="/testnet" \
     SOCKET_ROOT="/testnet" \
     BLOCKSCOUT_HOST="explorer.zion.network" \
-    API_PATH="/testnet"
+    API_PATH="/testnet" \
+    CHAIN_ID=60803
 
 RUN set -ex && \
     apk --update add libstdc++ curl ca-certificates && \
